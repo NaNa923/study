@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+		<title>게시판</title>
+		<script type="text/javascript" src="@resource/js/jquery-1.11.1.min.js"></script>
+		<!-- 1.11.1 버전 (1.x.x 의 마지막 버전) -->
+		<script src="//code.jquery.com/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header"></div>
+			<div id="wrap">
+				<div class="container">
+					<div id="sec01" class="sec01 section">
+						<div class="cont_wrap">
+                            <div class="boardList">
+                                <div class="boardTitle">
+                                    <h1>게시판 제목</h1>
+                                </div>
+                                <div class="tabBox">
+                                    <ul class="tab">
+                                        <li class="tabList active">
+                                            <a href="#tab-1" class="tab-control">tab1</a>
+                                        </li>
+                                        <li class="tabList">
+                                            <a href="#tab-2" class="tab-control">tab2</a>
+                                        </li>
+                                        <li class="tabList">
+                                            <a href="#tab-3" class="tab-control">tab3</a>
+                                        </li>
+                                    </ul>
+                                    <div class="searchBox">
+                                        <input type="text" id="search" value placeholder="검색어를 입력해주세요">
+                                        <a href="javascript:void(0);">
+                                            <img src="@resource/images/search_icon.svg" alt="search_icon">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="listBox">
+                                    <div class="list active" id="tab-1">
+                                        <div class="row">
+                                            <div class="column">
+                                                <p class="number">1</p>  
+                                                <p class="title">
+                                                    <a class="view_btn" href="boardView.html"></a>
+                                                    tab1 - Column 1
+                                                </p>
+                                                <p class="day">2022.06.21</p>
+                                            </div>
+                                            <div class="column">
+                                                <p class="number">2</p>  
+                                                <p class="title">
+                                                    <a class="view_btn" href="boardView.html"></a>
+                                                    tab1 - Column 2
+                                                </p>
+                                                <p class="day">2022.06.21</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">
+                                                <p class="number">3</p>  
+                                                <p class="title">
+                                                    <a class="view_btn" href="boardView.html"></a>
+                                                    tab1 - Column 3
+                                                </p>
+                                                <p class="day">2022.06.21</p>
+                                            </div>
+                                            <div class="column">
+                                                <p class="number">4</p>  
+                                                <p class="title">
+                                                    <a class="view_btn" href="boardView.html"></a>
+                                                    tab1 - Column 4
+                                                </p>
+                                                <p class="day">2022.06.21</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list" id="tab-2">
+                                        <div class="row">
+                                            <div class="column">
+                                                <p class="number">1</p>  
+                                                <p class="title">
+                                                    <a class="view_btn" href="boardView.html"></a>
+                                                    tab2 - Column 1
+                                                </p>
+                                                <p class="day">2022.06.21</p>
+                                            </div>
+                                            <div class="column">
+                                                <p class="number">2</p>  
+                                                <p class="title">
+                                                    <a class="view_btn" href="boardView.html"></a>
+                                                    tab2 - Column 2
+                                                </p>
+                                                <p class="day">2022.06.21</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">
+                                                <p class="number">3</p>  
+                                                <p class="title">
+                                                    <a class="view_btn" href="boardView.html"></a>
+                                                    tab2 - Column 3
+                                                </p>
+                                                <p class="day">2022.06.21</p>
+                                            </div>
+                                            <div class="column">
+                                                <p class="number">4</p>  
+                                                <p class="title">
+                                                    <a class="view_btn" href="boardView.html"></a>
+                                                    tab2 - Column 4
+                                                </p>
+                                                <p class="day">2022.06.21</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list" id="tab-3">
+                                        <div class="row">
+                                            <div class="column">
+                                                <p class="number">1</p>  
+                                                <p class="title">
+                                                    <a class="view_btn" href="boardView.html"></a>
+                                                    tab3 - Column 1
+                                                </p>
+                                                <p class="day">2022.06.21</p>
+                                            </div>
+                                            <div class="column">
+                                                <p class="number">2</p>  
+                                                <p class="title">
+                                                    <a class="view_btn" href="boardView.html"></a>
+                                                    tab3 - Column 2
+                                                </p>
+                                                <p class="day">2022.06.21</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">
+                                                <p class="number">3</p>  
+                                                <p class="title">
+                                                    <a class="view_btn" href="boardView.html"></a>
+                                                    tab3 - Column 3
+                                                </p>
+                                                <p class="day">2022.06.21</p>
+                                            </div>
+                                            <div class="column">
+                                                <p class="number">4</p>  
+                                                <p class="title">
+                                                    <a class="view_btn" href="boardView.html"></a>
+                                                    tab3 - Column 4
+                                                </p>
+                                                <p class="day">2022.06.21</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boardPage">
+                                    <ul class="pagenation">
+                                        <li>
+                                            <a href="javascript:void(0);" class="arrow arrow_prev">
+                                                <img src="@resource/images/arrow_prev.svg" alt="prev">
+                                            </a>
+                                        </li>
+                                        <li class="num on">
+                                            <a href="javascript:void(0);">1</a>
+                                        </li>
+                                        <li class="num">
+                                            <a href="javascript:void(0);">2</a>
+                                        </li>
+                                        <li class="num">
+                                            <a href="javascript:void(0);">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="arrow arrow_next">
+                                                <img src="@resource/images/arrow_next.svg" alt="next">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+					</div> 
+				</div>
+			</div>
+			<div id="footer"></div>
+		</div>
+    
+    <script>
+        $(document).ready(function(){
+
+            //tab 
+            // $(".tab").each(function() {
+            //     var $this = $(this);  
+            //     var tab = $this.find("li.active"); // [현재] 활성화 탭
+            //     var link = tab.find("a"); // [현재] 활성화 탭의 li의 a
+            //     var list = $(link.attr("href")); // [현재] 활성화 리스트   
+
+            //     $(this).on("click", ".tab-control", function (e) {
+
+            //         e.preventDefault(); // 기본이벤트 막기
+
+            //         // 현재 클릭한 영역 찾기
+            //         var click_link = $(this); // 클릭한 li를 찾기 위해서 
+            //         id = this.hash;      // href 안에 있는 아이디값 찾음
+
+            //         // 클릭한 부분에 대한 active 활성화 추가
+            //         if (id && !click_link.is(".active")) { //active가 없으면 실행
+            //             //현재 탭과 리스트에서 active제거
+            //             list.removeClass("active");
+            //             tab.removeClass("active");
+
+            //             list = $(id).addClass("active");              // 선택된 리스트 활성화 영역 저장
+            //             tab = click_link.parent().addClass("active"); // 선택된 li 영역 활성화 영역 저장 
+            //         }
+            //     }); 
+            // });
+
+            //tab
+            $(document).on('click','.tab-control', function(e){
+
+                const click_link = $(this).attr('href');
+
+                e.preventDefault(); // 기본이벤트 막기
+                
+                $(this).parent().addClass('active').siblings().removeClass('active');
+                $(click_link).show().siblings().hide(); 
+            });
+            
+        });
+    </script>
+	</body>
+</html>
