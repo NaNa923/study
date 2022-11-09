@@ -224,7 +224,7 @@
             </div>
             <div id="footer"></div>
         </div>
-        <script>
+         <script>
             $(document).ready(function () {
 
                 /*슬리이드 기능 구현*/
@@ -250,15 +250,18 @@
                 tabButton.on('click',moveSlide);
                 arrowOpacity();
 
-                
+
+                /* 활성화된 tab 컬러 바꾸기 */
                 function tabcolorChange () {
                     $(tabButton).eq(currentIdx).parent().addClass("active").siblings().removeClass("active");
                 }
 
+                /* 슬라이드 이동시키기 */
                 function slideShift() {
                     $(slider).css('transform',`translateX(-${translate}px)`);
                 }
 
+                /* 컬러바꾸고 슬라이드 이동 */
                 function tabShift() {
                     translate = liWidth * currentIdx;
                     slideShift();
@@ -297,40 +300,22 @@
                                 tabShift();
                             }
                             
-                        }else if (event.target.className === 'tabmenu01'){
+                        }
+                        else if (event.target.className === 'tabmenuItem'){
+
+                            /* class에서 tabmenu몇번째인지 숫자가져오기 */
+                            const className = $(this).parent().attr('class');
+                            const regex = /[^0-9]/g;
+                            const result = className.replace(regex, "");
+                            const number = parseInt(result) - 1;
+                            //console.log(number);
+
                             if( -translate < sliderMax){
-                                currentIdx = 0;
+                                currentIdx = number;
                                 tabShift();
                             }
                         }
-                        else if (event.target.className === 'tabmenu02'){
-                            if( -translate < sliderMax){
-                                currentIdx = 1;
-                                tabShift();
-                            }
-                        }
-                        else if (event.target.className === 'tabmenu03'){
-                            if( -translate < sliderMax){
-                                currentIdx = 2;
-                                tabShift();
-                            }
-                        }
-                        else if (event.target.className === 'tabmenu04'){
-                            if( -translate < sliderMax){
-                                currentIdx = 3;
-                                tabShift();
-                            }
-                        }
-                        else if (event.target.className === 'tabmenu05'){
-                            if( -translate <= sliderMax){
-                                currentIdx = 4;
-                                tabShift();
-                            } 
-                        }
-                       
-                    //console.log(sliderMax);
                     }
-                    //console.log(currentIdx);
                     arrowOpacity();
                 }   
             }});
