@@ -352,7 +352,7 @@
                             }
                         }
                         else if (event.target.className === 'tabmenuItem'){
-                            /* class에서 tabmenu몇번째인지 숫자가져오기 */
+                            /* class에서 tab몇번째인지 숫자가져오기 */
                             const className = $(this).parent().attr('class');
                             const regex = /[^0-9]/g;
                             const result = className.replace(regex, "");
@@ -365,7 +365,7 @@
                             }
                         }
                         else if (event.target.className === 'dotItem'){
-                            /* class에서 tabmenu몇번째인지 숫자가져오기 */
+                            /* class에서 dot몇번째인지 숫자가져오기 */
                             const className = $(this).parent().attr('class');
                             const regex = /[^0-9]/g;
                             const result = className.replace(regex, "");
