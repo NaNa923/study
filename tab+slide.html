@@ -28,6 +28,50 @@
         <script type="text/javascript" src="../assets/js/jquery-1.11.1.min.js"></script>
         <!-- 1.11.1 버전 (1.x.x 의 마지막 버전) -->
         <!-- <script src="//code.jquery.com/jquery.min.js"></script> -->
+        
+        <style>
+            /* 서브섹션 title*/
+            .section .subTitle {width: 100%; font-size: 30px; margin: 20px auto; max-width: 1240px;}
+
+            /* 콘텐츠 유형별 */
+            #sec01 {width: 100%; height: auto; margin: 200px auto;}
+            #sec01 .cont_wrap {display: flex;flex-direction: column; justify-content: center; align-items: center; width: 100%;max-width: 100%; height: 100%;}
+            /* slide tab */
+            #mainTab  {width: 100%; max-width: 1240px; margin: 0 auto;}
+            #mainTab .tabBox {}
+            #mainTab .tabBox ul {display: flex; width: 100%;}
+            #mainTab .tabBox ul li {width: 20%; height: 50px; border: 1px solid #000; border-right: none; line-height: 50px; text-align: center;}
+            #mainTab .tabBox ul li:last-child{border-right: 1px solid #000;}
+            #mainTab .tabBox ul li a {display: block; width: 100%; height: 100%;}
+            #mainTab .tabBox ul li.active {color: #fff; background-color: #000;}
+            #mainTab .tabBox ul li.active a {color: #fff;}
+
+            /*tab content */
+            .tabContent {position: relative; width: 100%; max-width: 1240px; margin: 0 auto;}
+            .tabContent > .slider_box {position: relative; overflow: hidden; margin: 0 auto;}
+            .tabContent > .slider_box  >.slider {position: relative; display: flex; height: auto; transition: 0.5s;}
+            .tabCont {position: relative; display: inline-block; width: auto; height: 100%; min-height: 330px; float: left;}
+            .tabCont.active {display: block;}
+
+            .slideBox {display: block; width: 100%; min-width: 1240px; margin: 0 auto;}
+            .slideBox .slideWrap {display: flex; justify-content: flex-start; align-items: center; width: 100%; margin: 50px auto;}
+            .slideBox .slideWrap .slideImg {display: block; width: 50%; height: 100%; z-index: 99;}
+            .slideBox .slideWrap .slideImg a {display: block; width: 200px; height: 150px;margin: 0 auto;}
+            .slideBox .slideWrap .slideImg img {display: block; width: 100%; height: 100%; background-color: #dedede;}
+            .slideBox .slideWrap .slideText {display: block; width: 50%;}
+            .slideBox .slideWrap .slideText ul {display: flex; flex-direction: column;}
+            .slideBox .slideWrap .slideText ul li {font-size: 18px; line-height: 1.8;}
+            .slideBox .slideWrap .slideText ul li:first-child {font-size: 20px;}
+            .slideBox .slideWrap .slideText ul li a {display: inline-block; width: auto; z-index: 99;}
+
+            .arrow  {position:absolute; display: flex; justify-content: space-between; top: 45%; width: 100%; max-width: 1240px; height: 30px; z-index: 10;}
+            .arrow a{ width: 30px; height: 30px; background-color: #000; text-align: center; color: #fff;}
+
+            .slideDot {width: 100%; text-align: center;}
+            .slideDot .dotList { display: inline-flex; gap: 15px; width: auto; margin: 0 auto; }
+            .slideDot .dotList .dot { display: inline-block; width: 10px; height:10px; border-radius: 50%; background-color: #000; opacity: 0.5;}
+            .slideDot .dotList .dot.active { opacity: 1;}
+        </style>
     </head>
     <body>
         <div id="wrapper">
