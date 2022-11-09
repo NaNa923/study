@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <!-- 영문 en -->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- minimum-scale=1 : 최소 크기 설정 (기본값 : 0.25, 범위 : 0~10.0), maximum-scale=1 : 최대 크기 설정(최대 배율 범위 : 0~10.0), user-scalable=no : 사용자 단말의 확대기능 사용 유무 선언(yes/no) -->
+        <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1, user-scalable=0"/>
+        <!-- 모바일 사파리에서 전화번호 링크 비활성화하기 -->
+        <meta name="format-detection" content="telephone=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:site_name" content="" />
+        <meta property="og:locale" content="ko_KR" />
+        <meta property="og:image:width" content="" />
+        <meta property="og:image:height" content="" />
+
+        <title>UX writer</title>
+        <link rel="stylesheet" type="text/css" href="../assets/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="../assets/css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+
+        <script type="text/javascript" src="../assets/js/jquery-1.11.1.min.js"></script>
+        <!-- 1.11.1 버전 (1.x.x 의 마지막 버전) -->
+        <!-- <script src="//code.jquery.com/jquery.min.js"></script> -->
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header"></div>
+            <div id="wrap" class="main">
+                <div class="container">
+                    <!-- 콘텐츠 유형별 -->
+                    <div id="sec01" class="sec01 section">
+                        <div class="cont_wrap">
+                            <div class="subTitle fw_600">
+                                <p>콘텐츠 유형별</p>
+                            </div>
+                            <div id="mainTab" class="mainTab">
+                                <div class="tabBox">
+                                    <ul class="tabList">
+                                        <li class="tabmenu active">
+                                            <a href="javascript:void(0);" class="tabmenu01">버튼</a>
+                                        </li>
+                                        <li class="tabmenu">
+                                            <a href="javascript:void(0);"  class="tabmenu02">다이얼로그</a>
+                                        </li>
+                                        <li class="tabmenu">
+                                            <a href="javascript:void(0);"  class="tabmenu03">툴팁</a>
+                                        </li>
+                                        <li class="tabmenu">
+                                            <a href="javascript:void(0);"  class="tabmenu04">텍스트필드</a>
+                                        </li>
+                                        <li class="tabmenu">
+                                            <a href="javascript:void(0);"  class="tabmenu05">메시지</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="tabContent" class="tabContent">
+                                <div class="slider_box">
+                                    <ul class="slider">
+                                        <li id="tab01" class="tabCont tab01 active">
+                                            <div class="slideBox">
+                                                <div class="slideWrap">
+                                                    <div class="slideImg">
+                                                        <img src="" alt="">
+                                                    </div>
+                                                    <div class="slideText">
+                                                        <ul>
+                                                            <li class="fw_500">
+                                                                <a href="javascript:void(0);">버튼종류</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">기본버튼</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">~하기버튼</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">예/아니오버튼</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">여부버튼</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">신청/가입버튼</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">CTA버튼(마케팅)</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="tab02" class="tabCont tab02 ">
+                                            <div class="slideBox">
+                                                <div class="slideWrap">
+                                                    <div class="slideImg">
+                                                        <img src="" alt="">
+                                                    </div>
+                                                    <div class="slideText">
+                                                        <ul>
+                                                            <li class="fw_500">
+                                                                <a href="javascript:void(0);">다이얼로그</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">타이틀형 팝업</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">본문형 팝업</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">컨펌형 슬라이딩 팝업</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">선택형 슬라이딩 팝업</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">토스트</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="tab03" class="tabCont tab03">
+                                            <div class="slideBox">
+                                                <div class="slideWrap">
+                                                    <div class="slideImg">
+                                                        <img src="" alt="">
+                                                    </div>
+                                                    <div class="slideText">
+                                                        <ul>
+                                                            <li class="fw_500">
+                                                                <a href="javascript:void(0);">툴팁</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">기본형/나열형</a>
+                                                            </li>
+                                                            <li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="tab04" class="tabCont tab04">
+                                            <div class="slideBox">
+                                                <div class="slideWrap">
+                                                    <div class="slideImg">
+                                                        <img src="" alt="">
+                                                    </div>
+                                                    <div class="slideText">
+                                                        <ul>
+                                                            <li class="fw_500">
+                                                                <a href="javascript:void(0);">텍스트필드</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">레이블 및 입력창</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">얼럿메세지/도움말</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="tab05" class="tabCont tab05">
+                                            <div class="slideBox">
+                                                <div class="slideWrap">
+                                                    <div class="slideImg">
+                                                        <img src="" alt="">
+                                                    </div>
+                                                    <div class="slideText">
+                                                        <ul>
+                                                            <li class="fw_500">
+                                                                <a href="javascript:void(0);">메시지</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">헤드메시지</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">완료메시지</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">오류메시지</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">해지/이탈방지 메시지</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0);">이용안내</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="arrow">
+                                        <a href="javascript:void(0);" class="prev"><</a>
+                                        <a href="javascript:void(0);" class="next">></a>
+                                    </div>
+                                    <div class="slideDot">
+                                        <ul class="dotList">
+                                            <li class="dot active"><a href="#"></a></li>
+                                            <li><a href="#"></a></li>
+                                            <li><a href="#"></a></li>
+                                            <li><a href="#"></a></li>
+                                            <li><a href="#"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer"></div>
+        </div>
+        <script>
+            $(document).ready(function () {
+
+                /*슬리이드 기능 구현*/
+                window.onload = function() {
+                const contWrap = $('#sec02 .cont_wrap');
+                const slider = $('.slider');
+                const slideLis = $('.tabCont');
+                const moveButton = $('.arrow');
+                const tabButton = $(".tabmenu a");
+                const prev = $('.prev');
+                const next = $('.next');
+
+                /* ul 넓이 계산해 주기 */
+                const liWidth = slideLis[0].clientWidth;
+                const sliderWidth = liWidth * slideLis.length;
+                const sliderMax = liWidth * (slideLis.length -1);
+                slider.css('width', `${sliderWidth}px`);
+
+                /* 리스너 설치하기 */
+                let currentIdx = 0; // 슬라이드 현재 번호
+                let translate = 0; // 슬라이드 위치 값
+                moveButton.on('click', moveSlide);
+                tabButton.on('click',moveSlide);
+                arrowOpacity();
+
+                
+                function tabcolorChange () {
+                    $(tabButton).eq(currentIdx).parent().addClass("active").siblings().removeClass("active");
+                }
+
+                function slideShift() {
+                    $(slider).css('transform',`translateX(-${translate}px)`);
+                }
+
+                function tabShift() {
+                    translate = liWidth * currentIdx;
+                    slideShift();
+                    tabcolorChange();
+                }
+
+                
+                function moveSlide(event) {
+                    event.preventDefault()
+                    if(currentIdx >= 0 && currentIdx <=4 && translate <= sliderMax && translate >= 0){
+                        if (event.target.className === 'next') {
+                            if (currentIdx !== 4 && translate <= sliderMax){
+                                currentIdx += 1;
+                                tabShift();
+                            }
+                        }
+                        else if (event.target.className === 'prev') {
+                            if(currentIdx !== 0 && translate >= 0){
+                                currentIdx -= 1;
+                                tabShift();
+                            }
+                            
+                        }else if (event.target.className === 'tabmenu01'){
+                            if( -translate < sliderMax){
+                                currentIdx = 0;
+                                tabShift();
+                            }
+                        }
+                        else if (event.target.className === 'tabmenu02'){
+                            if( -translate < sliderMax){
+                                currentIdx = 1;
+                                tabShift();
+                            }
+                        }
+                        else if (event.target.className === 'tabmenu03'){
+                            if( -translate < sliderMax){
+                                currentIdx = 2;
+                                tabShift();
+                            }
+                        }
+                        else if (event.target.className === 'tabmenu04'){
+                            if( -translate < sliderMax){
+                                currentIdx = 3;
+                                tabShift();
+                            }
+                        }
+                        else if (event.target.className === 'tabmenu05'){
+                            if( -translate <= sliderMax){
+                                currentIdx = 4;
+                                tabShift();
+                            } 
+                        }
+                        arrowOpacity();
+                    }
+                }
+
+
+                /* 맨앞 슬라이드 맨뒤 슬라이드로 가면 opacity:0.5 */ 
+                function arrowOpacity(){
+                    //console.log(currentIdx);
+                    if (currentIdx === 0)  {
+                        prev.css('opacity','0.5');
+                    }
+                    else if(currentIdx === slideLis.length-1){
+                        next.css('opacity','0.5');
+                    }
+                    else {
+                        prev.css('opacity','1');
+                        next.css('opacity','1');
+                    }
+                }
+                }   
+            });
+        </script>
+    </body>
+</html>
