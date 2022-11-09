@@ -280,6 +280,7 @@
                 const moveButton = $('.arrow');
                 const tabButton = $(".tabmenu a");
                 const dot = $('.dot');
+                const dotButton = $('.dot a');
                 const prev = $('.prev');
                 const next = $('.next');
 
@@ -295,6 +296,7 @@
                 let translate = 0; // 슬라이드 위치 값
                 moveButton.on('click', moveSlide);
                 tabButton.on('click',moveSlide);
+                dotButton.on('click',moveSlide);
                 arrowOpacity();
 
 
@@ -333,6 +335,7 @@
                     }
                 }
                 
+
                 function moveSlide(event) {
                     event.preventDefault()
                     if(currentIdx >= 0 && currentIdx <= slideLength && translate <= sliderMax && translate >= 0){
@@ -349,7 +352,6 @@
                             }
                         }
                         else if (event.target.className === 'tabmenuItem'){
-
                             /* class에서 tabmenu몇번째인지 숫자가져오기 */
                             const className = $(this).parent().attr('class');
                             const regex = /[^0-9]/g;
@@ -376,7 +378,7 @@
                             }
                         }
                     }
-                    arrowOpacity();
+                arrowOpacity();
                 }   
             }});
         </script>
