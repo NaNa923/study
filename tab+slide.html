@@ -238,9 +238,10 @@
                 const next = $('.next');
 
                 /* ul 넓이 계산해 주기 */
+                const slideLength= slideLis.length -1;
                 const liWidth = slideLis[0].clientWidth;
                 const sliderWidth = liWidth * slideLis.length;
-                const sliderMax = liWidth * (slideLis.length -1);
+                const sliderMax = liWidth * slideLength;
                 slider.css('width', `${sliderWidth}px`);
 
                 /* 리스너 설치하기 */
@@ -275,7 +276,7 @@
                         prev.css('opacity','0.5');
                         next.css('opacity','1');
                     }
-                    else if(currentIdx === slideLis.length-1){
+                    else if(currentIdx === slideLength){
                         prev.css('opacity','1');
                         next.css('opacity','0.5');
                     }
@@ -287,9 +288,9 @@
                 
                 function moveSlide(event) {
                     event.preventDefault()
-                    if(currentIdx >= 0 && currentIdx <=4 && translate <= sliderMax && translate >= 0){
+                    if(currentIdx >= 0 && currentIdx <= slideLength && translate <= sliderMax && translate >= 0){
                         if (event.target.className === 'next') {
-                            if (currentIdx !== 4 && translate <= sliderMax){
+                            if (currentIdx !== slideLength && translate <= sliderMax){
                                 currentIdx += 1;
                                 tabShift();
                             }
