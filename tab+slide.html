@@ -71,6 +71,7 @@
             .slideDot .dotList { display: inline-flex; gap: 15px; width: auto; margin: 0 auto; }
             .slideDot .dotList .dot { display: inline-block; width: 10px; height:10px; border-radius: 50%; background-color: #000; opacity: 0.5;}
             .slideDot .dotList .dot.active { opacity: 1;}
+            .slideDot .dotList .dot a {display: block; width: 100%; height: 100%;}
         </style>
     </head>
     <body>
@@ -253,11 +254,11 @@
                                     </div>
                                     <div class="slideDot">
                                         <ul class="dotList">
-                                            <li class="dot active"><a href="#"></a></li>
-                                            <li class="dot"><a href="#"></a></li>
-                                            <li class="dot"><a href="#"></a></li>
-                                            <li class="dot"><a href="#"></a></li>
-                                            <li class="dot"><a href="#"></a></li>
+                                            <li class="dot dot1 active"><a href="javascript:void(0);" class="dotItem"></a></li>
+                                            <li class="dot dot2"><a href="javascript:void(0);" class="dotItem"></a></li>
+                                            <li class="dot dot3"><a href="javascript:void(0);" class="dotItem"></a></li>
+                                            <li class="dot dot4"><a href="javascript:void(0);" class="dotItem"></a></li>
+                                            <li class="dot dot5"><a href="javascript:void(0);" class="dotItem"></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -349,6 +350,19 @@
                         }
                         else if (event.target.className === 'tabmenuItem'){
 
+                            /* class에서 tabmenu몇번째인지 숫자가져오기 */
+                            const className = $(this).parent().attr('class');
+                            const regex = /[^0-9]/g;
+                            const result = className.replace(regex, "");
+                            const number = parseInt(result) - 1;
+                            //console.log(number);
+
+                            if( -translate < sliderMax){
+                                currentIdx = number;
+                                tabShift();
+                            }
+                        }
+                        else if (event.target.className === 'dotItem'){
                             /* class에서 tabmenu몇번째인지 숫자가져오기 */
                             const className = $(this).parent().attr('class');
                             const regex = /[^0-9]/g;
