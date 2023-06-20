@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>onescroll</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+      html {
+        overflow: hidden;
+      }
+
+      html,
+      body {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      .section {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      #section1 {
+        background-color: aliceblue;
+      }
+
+      #section2 {
+        background-color: lightpink;
+      }
+
+      #section3 {
+        background-color: coral;
+      }
+
+      #section4 {
+        background-color: aqua;
+      }
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="section" id="section1">
+      <div id="section1_detail">section1</div>
+    </div>
+    <div class="section" id="section2">
+      <div id="section2_detail">section2</div>
+    </div>
+    <div class="section" id="section3">
+      <div id="section3_detail">section3</div>
+    </div>
+    <div class="section" id="section4">
+      <div id="section4_detail">section4</div>
+    </div>
+  
+  </body>
+  
+  <script>
+    window.addEventListener(
+        "wheel",
+        function (e) {
+          e.preventDefault();
+        },
+        { passive: false }
+      );
+
+      var mHtml = $("html");
+      var page = 1;
+      mHtml.animate({ scrollTop: 0 }, 10);
+
+      $(document).ready(function () {
+        // 휠이벤트 처리
+        $(window).on("wheel", function (e) {
+          console.log("whellmove");
+          if (mHtml.is(":animated")) return;
+          if (e.originalEvent.deltaY > 0) {
+            if (page == 4) return;
+            page++;
+          } else if (e.originalEvent.deltaY < 0) {
+            if (page == 1) return;
+            page--;
+          }
+          var posTop = (page - 1) * $(window).height();
+          mHtml.animate({ scrollTop: posTop });
+        });
+      });
+
+  </script>
+</html>
